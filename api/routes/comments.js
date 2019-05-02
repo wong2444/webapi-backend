@@ -22,9 +22,9 @@ router.post('/', checkAuth, CommentsController.comments_create_comment)
 
 
 
-router.put('/:commentId',checkAuth ,CommentsController.comments_update_comment)
+router.put('/:commentId' ,CommentsController.comments_update_comment)
 
 
-router.delete('/:commentId',checkAuth ,CommentsController.comments_delete_comment)
+router.delete('/:commentId' ,CommentsController.comments_delete_comment)
 
 module.exports = router

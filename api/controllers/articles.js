@@ -150,7 +150,8 @@ exports.articles_update_article = (req, res, next) => {
                     }
                 })
             } else {
-                res.status(404).json({message: "article not found"})
+                res.status(404).json({message: "article not found",res:res})
+                console.log(res)
             }
 
         })

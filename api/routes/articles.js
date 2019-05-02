@@ -16,9 +16,9 @@ router.post('/', checkAuth, ArticlesController.articles_create_article)
 
 router.get('/:articleId', ArticlesController.articles_get_article)
 
-router.put('/:articleId', checkAuth, ArticlesController.articles_update_article)
+router.put('/:articleId', ArticlesController.articles_update_article)
 
 
-router.delete('/:articleId', checkAuth, ArticlesController.articles_delete_article)
+router.delete('/:articleId', ArticlesController.articles_delete_article)
 
 module.exports = router

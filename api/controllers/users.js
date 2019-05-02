@@ -73,6 +73,7 @@ exports.user_login = (req, res, next) => {
                         message: 'Auth successful',
                         token: token,
                         userId: user[0]._id,
+                        name: user[0].name,
                     })
                 }
                 res.status(401).json({
@@ -99,7 +100,7 @@ exports.add_user_favour = (req, res, next) => {
                 })
             } else {
                 console.log(user)
-                user[0].favor.push('5cc0424adc26ae560ce2b053')
+                user[0].favor.push(req.params.articleId)
                 user[0].save()
 
             }
