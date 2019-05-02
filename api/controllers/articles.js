@@ -38,7 +38,7 @@ exports.articles_create_article = (req, res, next) => {
         _id: new mongoose.Types.ObjectId(),
         title: req.body.title,
         body: req.body.body,
-        author: '5cbf771673075f672c3eb6f0',
+        author: req.userData.userId,
         comments: [],
         // productImage: req.file.path
 
